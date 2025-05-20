@@ -1,0 +1,93 @@
+'use client';
+import ArrowAnimation from '@/components/ArrowAnimation';
+import Button from '@/components/Button';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import React from 'react';
+import sharadImg from '../../public/projects/images/sharad.png';
+import Image from 'next/image';
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+const Banner = () => {
+    const containerRef = React.useRef<HTMLDivElement>(null);
+    const [isHovered, setIsHovered] = React.useState(false);
+
+    // move the content a little up on scroll
+    useGSAP(
+        () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: 'bottom 70%',
+                    end: 'bottom 10%',
+                    scrub: 1,
+                },
+            });
+
+            tl.fromTo(
+                '.slide-up-and-fade',
+                { y: 0 },
+                { y: -150, opacity: 0, stagger: 0.02 },
+            );
+        },
+        { scope: containerRef },
+    );
+
+    return (
+        <section className="relative overflow-hidden" id="banner">
+            <ArrowAnimation />
+            <div
+                className="container h-[100svh] min-h-[530px] max-md:pb-10 flex justify-between items-center max-md:flex-col"
+                ref={containerRef}
+            >
+                <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
+                    <h1 className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton">
+                        <span className="text-primary">FULL STACK</span>
+                        <br /> <span className="ml-4">DEVELOPER</span>
+                    </h1>
+                    <p className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground">
+                        Hi! I&apos;m{' '}
+                        <span className="font-medium text-foreground">
+                            sharad sharma
+                        </span>
+                        . A Full Stack Developer with 3+ years of
+                        experience in building high-performance, scalable, and
+                        responsive web solutions.
+                    </p>
+                    <Button
+                        rel="noopener noreferrer"
+                        variant="primary"
+                        onClick={() => navigator.clipboard.writeText("sharadsharma.dev@gmail.com")}
+                        className="mt-9 banner-button slide-up-and-fade w-[300px] text-center"
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    >
+                        {isHovered ? "Click to copy" : "sharadsharma.dev@gmail.com"}
+                    </Button>
+                </div>
+                <div className="md:absolute right-[10%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">
+
+                  <Image 
+                    src={sharadImg}
+                    alt="sharad sharma"
+                    className='rounded-[2rem] border-4 border-solid border-white shadow-xl/30'
+                    width={500}
+                    height={300}
+                    priority
+                  />
+
+                    {/* <div className="slide-up-and-fade">
+                        <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
+                            10K+
+                        </h5>
+                        <p className="text-muted-foreground">Hours Worked</p>
+                    </div> */}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Banner;
