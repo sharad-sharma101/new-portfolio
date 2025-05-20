@@ -3,6 +3,7 @@ import ArrowAnimation from '@/components/ArrowAnimation';
 import Button from '@/components/Button';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { ScrollTrigger } from 'gsap/all';
 import React from 'react';
 import sharadImg from '../../public/projects/images/sharad.png';
@@ -68,15 +69,21 @@ const Banner = () => {
                     </Button>
                 </div>
                 <div className="md:absolute right-[10%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">
+                    <CardContainer className="inter-var">
+                        <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-[2rem] border  ">
 
-                  <Image 
-                    src={sharadImg}
-                    alt="sharad sharma"
-                    className='rounded-[2rem] border-4 border-solid border-white shadow-xl/30'
-                    width={500}
-                    height={300}
-                    priority
-                  />
+                            <CardItem translateZ="100" className="w-full">
+                                <Image
+                                    src={sharadImg}
+                                    alt="sharad sharma"
+                                    className='rounded-[2rem] border-4 border-solid border-white shadow-xl/30'
+                                    width={500}
+                                    height={300}
+                                    priority
+                                />
+                            </CardItem>
+                        </CardBody>
+                    </CardContainer>
 
                     {/* <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
