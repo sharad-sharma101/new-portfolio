@@ -9,6 +9,9 @@
         "lint": "next lint",
         "svgr:icons": "svgr --title-prop --no-dimensions --typescript -d components/icons -- components/icons/svgs"
     },
+    "engines": {
+        "node": ">=20.0.0"
+    },
     "dependencies": {
         "@gsap/react": "^2.1.1",
         "@next/third-parties": "^15.2.0",
