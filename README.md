@@ -12,7 +12,7 @@ This is a personal portfolio project built using [Next.js](https://nextjs.org/).
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/portfolio.git
+    git clone https://github.com/sharad-sharma101/new-portfolio.git
     ```
 2. Navigate to the project directory:
     ```bash
@@ -20,11 +20,11 @@ This is a personal portfolio project built using [Next.js](https://nextjs.org/).
     ```
 3. Install dependencies:
     ```bash
-    npm install
+    pnpm install
     ```
 4. Run the development server:
     ```bash
-    npm run dev
+    pnpm run dev
     ```
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
