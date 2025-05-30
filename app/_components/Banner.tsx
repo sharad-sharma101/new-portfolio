@@ -8,12 +8,14 @@ import { ScrollTrigger } from 'gsap/all';
 import React from 'react';
 import sharadImg from '../../public/projects/images/sharad.png';
 import Image from 'next/image';
+import { FileIcon } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const Banner = () => {
     const containerRef = React.useRef<HTMLDivElement>(null);
     const [isHovered, setIsHovered] = React.useState(false);
+    const [isResume, setIsResume] = React.useState(false);
 
     // move the content a little up on scroll
     useGSAP(
@@ -40,7 +42,7 @@ const Banner = () => {
         <section className="relative overflow-hidden" id="banner">
             <ArrowAnimation />
             <div
-                className="container h-[100svh] min-h-[530px] max-md:pb-10 flex justify-between items-center max-md:flex-col"
+                className="container h-[100svh] min-h-[530px] max-md:pb-10 max-md:mt-20 flex justify-between items-center max-md:flex-col"
                 ref={containerRef}
             >
                 <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
@@ -66,6 +68,20 @@ const Banner = () => {
                         onMouseLeave={() => setIsHovered(false)}
                     >
                         {isHovered ? "Click to copy" : "sharadsharma.dev@gmail.com"}
+                    </Button>
+                    <Button
+                        rel="noopener noreferrer"
+                        variant="primary"
+                        href="https://drive.google.com/file/d/1COPPWriHI_teIFvN8IRsazmq1OiJ_kKq/view?usp=sharing"
+                        target="_blank"
+                        className="mt-9 banner-button slide-up-and-fade w-[300px] text-center"
+                        onMouseEnter={() => setIsResume(true)}
+                        onMouseLeave={() => setIsResume(false)}
+                    >
+                        <span className="flex items-center gap-2">
+                            <FileIcon size={20} />
+                            {isResume ? "Click to go resume" : "Download Resume"}
+                        </span>
                     </Button>
                 </div>
                 <div className="md:absolute right-[10%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">

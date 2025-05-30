@@ -10,7 +10,7 @@ export const GENERAL_INFO = {
 };
 
 export const SOCIAL_LINKS = [
-    { name: 'github', url: 'https://github.com/sharad sharma' },
+    { name: 'github', url: 'https://github.com/sharad-sharma101' },
     { name: 'linkedin', url: 'https://in.linkedin.com/in/sharad-sharma-575226192' },
     { name: 'Old Version', url: 'https://github.com/sharad-sharma101' },
 ];

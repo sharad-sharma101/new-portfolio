@@ -34,7 +34,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 type Props = {
     as?: 'link' | 'button';
     loading?: boolean;
-    icon?: boolean;
+    icon?: ReactNode;
     children: ReactNode | ReactNode[];
     className?: string;
     variant?: Variant;
