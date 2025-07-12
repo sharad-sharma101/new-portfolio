@@ -72,7 +72,7 @@ const Banner = () => {
                     <Button
                         rel="noopener noreferrer"
                         variant="primary"
-                        href="https://drive.google.com/file/d/19rufXzhlRZF_EbXLYpgg2h1msJ6SUm6u/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1TGAPNmNlHt4SV39py1lI9fEwS_gQ7bhZ/view?usp=sharing"
                         target="_blank"
                         className="mt-9 banner-button slide-up-and-fade w-[300px] text-center"
                         onMouseEnter={() => setIsResume(true)}
