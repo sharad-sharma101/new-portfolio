@@ -118,14 +118,14 @@ export const MY_EXPERIENCE = [
         duration: 'March 2023 - Dec 2023',
     },
     {
-        title: 'Web Devloper',
+        title: 'Web Developer',
         company: 'Kidaura',
-        duration: 'Oct 2022 - March 2023',
+        duration: 'Oct 2021 - March 2023',
     },
     {
         title: 'MERN Stack Trainee',
         company: 'Newton School',
-        duration: 'May 2022 - Oct 2022',
+        duration: 'May 2021 - Oct 2021',
     },
 ];
 
