@@ -55,7 +55,7 @@ const Banner = () => {
                         <span className="font-medium text-foreground">
                             sharad sharma
                         </span>
-                        . A Full Stack Developer with 3+ years of
+                        . A Full Stack Developer with around 4 years of
                         experience in building high-performance, scalable, and
                         responsive web solutions.
                     </p>
@@ -72,7 +72,7 @@ const Banner = () => {
                     <Button
                         rel="noopener noreferrer"
                         variant="primary"
-                        href="https://drive.google.com/file/d/1TGAPNmNlHt4SV39py1lI9fEwS_gQ7bhZ/view?usp=sharing"
+                        href="https://drive.google.com/file/d/15Z8og17of0UjjX8UYqiRaJ4Dgq9MqXmo/view?usp=sharing"
                         target="_blank"
                         className="mt-9 banner-button slide-up-and-fade w-[300px] text-center"
                         onMouseEnter={() => setIsResume(true)}
